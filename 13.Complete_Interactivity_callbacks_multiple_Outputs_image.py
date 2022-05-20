@@ -15,7 +15,7 @@ df = pd.read_csv(r"C:\Users\sina.kian\Desktop\New folder\plotly\Dashes\wheels.cs
 
 def encode_image(image_file):
     encoded = base64.b64encode(open(image_file, 'rb').read())
-    return r'images\png;base64,{}'.format(encoded.decode())
+    return 'data:image\png;base64,{}'.format(encoded.decode())
 
 app.layout = html.Div([
     dcc.RadioItems(
